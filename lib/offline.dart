@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'BlogListScreen.dart';
-// import 'blog_database.dart';
 
 class OfflineScreen extends StatefulWidget {
   @override
@@ -8,7 +7,7 @@ class OfflineScreen extends StatefulWidget {
 }
 
 class _OfflineScreenState extends State<OfflineScreen> {
-  List<Blog> offlineBlogs = []; // List to store offline blogs
+  List<Blog> offlineBlogs = [];
 
   @override
   void initState() {
@@ -16,12 +15,8 @@ class _OfflineScreenState extends State<OfflineScreen> {
     loadOfflineBlogs();
   }
 
-
-  // Function to load data from the SQLite database
   Future<void> loadOfflineBlogs() async {
-    // Create an instance of the DatabaseHelper
     DatabaseHelper databaseHelper = DatabaseHelper();
-    // Fetch favorite blogs from the local SQLite database
     final List<Blog> favorites = await databaseHelper.getFavoriteBlogs();
 
     setState(() {

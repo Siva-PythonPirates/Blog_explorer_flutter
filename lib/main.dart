@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // Define a custom MaterialColor with black as the primary color
     MaterialColor customBlack = MaterialColor(0xFF000000, {
       50: Color(0xFFE0E0E0),
       100: Color(0xFFB3B3B3),
@@ -30,13 +29,12 @@ class MyApp extends StatelessWidget {
       title: 'Blog Explorer',
       home: SplashScreen(),
       theme: ThemeData(
-        primarySwatch: customBlack, // Set your custom black MaterialColor
+        primarySwatch: customBlack,
       ),
       debugShowCheckedModeBanner: false,
       routes: {
         '/blogList': (context) => BlogListScreen(),
         '/blogDetails': (context) => BlogDetailScreen(),
-        // '/favorites': (context) => FavoritesPage(),
       },
     );
   }

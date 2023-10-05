@@ -115,7 +115,6 @@ class _BlogListScreenState extends State<BlogListScreen> {
       }
     } catch (e) {
       print('Error: $e');
-      // Handle the error gracefully, e.g., by showing a snackbar or retry button.
     }
   }
 
@@ -161,9 +160,8 @@ class _BlogListScreenState extends State<BlogListScreen> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.download), // Change the icon to your preference
+            icon: Icon(Icons.download),
             onPressed: () {
-              // Navigate to the OfflineScreen when the button is pressed
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => OfflineScreen()),

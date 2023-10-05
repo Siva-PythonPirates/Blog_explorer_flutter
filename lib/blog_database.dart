@@ -41,7 +41,7 @@ class DatabaseHelper {
         // id: maps[i]['id'],
         title: maps[i]['title'],
         imageUrl: maps[i]['imageUrl'],
-        isFavorite: true, // Set isFavorite to true for favorite blogs
+        isFavorite: true,
       );
     });
   }
